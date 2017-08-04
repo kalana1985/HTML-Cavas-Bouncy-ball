@@ -21,12 +21,14 @@ var x = Math.random()*innerWidth;
 var y = Math.random() * innerHeight;
 
 //creata a new variable for x velocity
-var dx = 5 ;
+var dx = 5;
 //var dy=5 ;
 var radius=30;
 
 function animate(){
 	 requestAnimationFrame(animate);
+
+	 //this just like a fillRect() methord just the opposit
      c.clearRect(0,0,innerWidth,innerHeight);
 
 	 c.beginPath();
@@ -39,6 +41,6 @@ function animate(){
        dx = -dx;
      };
 
-     x++;
+     x += dx;
 }
 animate();
