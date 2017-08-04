@@ -22,7 +22,7 @@ var y = Math.random() * innerHeight;
 
 //creata a new variable for x velocity
 var dx = 5;
-//var dy=5 ;
+var dy = 5 ;
 var radius=30;
 
 function animate(){
@@ -36,11 +36,19 @@ function animate(){
      c.strokeStyle = "blue";
      c.stroke();
 
-     if(x + radius > innerWidth){
+     if(x + radius > innerWidth || x - radius<0){
        
        dx = -dx;
      };
 
      x += dx;
+     y += dy;
+
+     if(y + radius > innerHeight || y - radius<0){
+       
+       dy = -dy;
+     };
+
+     
 }
 animate();
